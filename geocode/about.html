@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.19">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Monaco}
+    span.s1 {font: 11.0px Monaco; color: #3933ff}
+    span.s2 {color: #0326cc}
+    span.s3 {color: #3933ff}
+    span.s4 {color: #931a68}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">Set of objects to get Google Geocode Api Service response with the coordinates of a requested address (<span class="s1">http://maps.google.com/maps/api/geocode/json</span>)</p>
+<p class="p2"><br></p>
+<p class="p1">Retrofit sample request:</p>
+<p class="p3"><span class="Apple-converted-space">  <span class="Apple-tab-span">	</span></span>geoApi.getCoordinates(<span class="s2">event</span>.getAddress().getNumber() + <span class="s3">" "</span> +<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span><span class="s2">event</span>.getAddress().getStreet() + <span class="s3">", "</span> +</p>
+<p class="p3"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span><span class="s2">event</span>.getAddress().getCity() + <span class="s3">", "</span>+</p>
+<p class="p3"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>  </span><span class="s2">event</span>.getAddress().getState(), <span class="s4">false</span>, <span class="s2">geocodeCallback</span>);</p>
+</body>
+</html>

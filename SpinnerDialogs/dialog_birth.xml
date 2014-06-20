@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/alert_background"
+    android:gravity="center"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    android:paddingTop="20dp"
+    android:layout_margin="@dimen/margin_date_dialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_date_dialog" 
+        android:layout_marginRight="@dimen/margin_date_dialog" 
+        android:layout_marginBottom="20dp"
+        android:gravity="center" >
+
+        <com.wheel.WheelView
+            android:id="@+id/wvDialogDay"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="100dp" />
+        <com.wheel.WheelView
+            android:id="@+id/wvDialogMonth"
+            android:layout_width="0dp"
+            android:layout_weight=".55"
+            android:layout_height="100dp" />
+         <com.wheel.WheelView
+            android:id="@+id/wvDialogYear"
+            android:layout_width="0dp"
+            android:layout_weight=".25"
+            android:layout_height="100dp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vwDividerDialog"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b3b3b3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="0dp" >
+
+        <Button
+            android:id="@+id/btDialogLeft"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="Fechar"
+            android:textColor="@drawable/selector_close_dialog" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#b3b3b3" />
+        
+        <Button
+            android:id="@+id/btDialogRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="Fechar"
+            android:textColor="@drawable/selector_close_dialog" />
+
+    </LinearLayout>
+
+</LinearLayout>

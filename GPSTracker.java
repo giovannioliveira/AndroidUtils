@@ -1,4 +1,3 @@
-package com.dezinove.fnfusuario.util;
 
 import android.app.Service;
 import android.content.Context;
