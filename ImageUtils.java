@@ -1,3 +1,6 @@
+package com.dezinove.fnfusuario.util;
+
+import java.util.Calendar;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -8,11 +11,26 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.TypedValue;
+import android.view.Display;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.dezinove.fnfusuario.Contents;
+import com.dezinove.fnfusuario.QRCodeEncoder;
 import com.dezinove.fnfusuario.R;
+import com.dezinove.fnfusuario.model.User;
+import com.google.zxing.BarcodeFormat;
+import com.squareup.picasso.Picasso;
+
 public class ImageUtils {
 
+    public static void loadImage(String imageURL, ImageView imageView, Context context) {
+
+    	String url = imageURL;
+    	Picasso.with(context).load(url)
+    	.placeholder(R.drawable.event_banner_default)
+    	.into(imageView);
+    }
     public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, int color, int cornerDips, int borderDips, Context context) {
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(),
                 Bitmap.Config.ARGB_8888);
@@ -72,5 +90,25 @@ public class ImageUtils {
     	return dstBmp;
     	
     }
+    
+	public static Bitmap generateFnfCard(Context context, String data){
+ 		try {
+ 		
+ 			WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+ 			Display display = wm.getDefaultDisplay();
+ 		
+ 			@SuppressWarnings("deprecation")
+ 			int width = display.getWidth();
+ 			int qrCodeDimention = width;
+
+ 			QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(data, null,
+ 					Contents.Type.TEXT, BarcodeFormat.QR_CODE.toString(), qrCodeDimention);
+
+ 			return qrCodeEncoder.encodeAsBitmap();
+ 			
+ 		} catch (Exception e) {
+ 		    return null;
+ 		}
+	}
 
 }
